@@ -1,0 +1,35 @@
+.popup-wrap{
+  width:600px;
+}
+.popup-title{
+  text-align:center;
+  font-weight:normal;
+  font-size:20rpx;
+  line-height:24rpx;
+  color:#333;
+}
+.popup-main{
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.popup-instruction{
+  width:300px;
+  margin:0 20px 0 0;
+  font-size:18rpx;
+  color:#999;
+}
+.popup-instruction__title{
+  font-weight:bold;
+  margin-bottom:10px;
+}
+.popup-instruction__item{
+  margin:0;
+}
+.qrcode{
+  width:200px;
+  height:200px;
+  background-color:black;
+}

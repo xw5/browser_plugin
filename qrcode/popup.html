@@ -5,8 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>二维码生成</title>
+  <link rel="stylesheet" href="./css/popup.css">
 </head>
 <body>
-  <h1>生成二维码吧</h1>
+  <div class="popup-wrap">
+    <h1 class="popup-title">二维码生成</h1>
+    <div class="popup-main">
+        <dl class="popup-instruction">
+          <dt class="popup-instruction__title">这是一个生成二维码的插件</dt>
+          <dd class="popup-instruction__item">* 默认二维码为当前激活的标签url</dd>
+          <dd class="popup-instruction__item">* 在文本框中输入要转为二维码的字段可以生成自定义的二维码</dd>
+        </dl>
+        <div class="qrcode"></div>
+    </div>
+  </div>
+  <script src="./js/popup.js"></script>
 </body>
 </html>
