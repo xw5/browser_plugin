@@ -49,6 +49,7 @@
 .qrcode-create__btn{
   width:140px;
   height:35px;
+  cursor: pointer;
   margin-top:10px;
   text-align:center;
   line-height:35px;
