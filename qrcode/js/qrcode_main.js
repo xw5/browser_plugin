@@ -1,9 +1,11 @@
 let nowUrl = "https://www.baidu.com";
 let qrcodeMain = null;
+let winId = null;
 chrome.windows.getCurrent((win) => {
+  winId = win.id;
   chrome.tabs.query({
     active:true,
-    windowId:win.id
+    windowId:winId
   },(tab) => {
     nowUrl = tab[0].url;
     createQrcode(nowUrl);
@@ -20,6 +22,11 @@ $('#createBtn').on('click', function () {
   createQrcode(str);
 })
 
+// 创建标签到指定网站
+$("#qrcodeWebsiteLink").on("click", ".qrcode-website__item", function (e) {
+  createTab(e.currentTarget.dataset.href);
+});
+
 // 生成二维码
 function createQrcode (str) {
   // 如果对象已存则无必再new
@@ -35,4 +42,12 @@ function createQrcode (str) {
   } else {
     qrcodeMain.makeCode(str);
   }
+}
+// 生成标签页
+function createTab(url) {
+  chrome.tabs.create({
+    windowId: winId,
+    url: url,
+    active: true
+  })
 }
