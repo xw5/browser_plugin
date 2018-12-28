@@ -9,6 +9,7 @@
   }
 }
 .xw-qrcode__win555 {
+  display:none;
   width:200px;
   height:200px;
   padding: 50px;
@@ -20,6 +21,9 @@
   margin:-100px 0 0 -100px;
   animation:qrcodeWinShow 0.5s 0s 1;
   background-color:#fff;
+}
+.xw-qrcode__win555--show{
+  display:block;
 }
 .xw-qrcode__con555{
   width:200px;
