@@ -15,6 +15,18 @@
       "default_title": "生成二维码",
       "default_popup": "qrcode_popup.html"
   },
+  "background": {
+    "scripts":[
+      "js/qrcode_background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches":["http://*/*","https://*/*"],
+      "css": ["css/qrcode_win.css"],
+      "js": ["js/qrcode.min.js","js/qrcode_win.js"]
+    }
+  ],
   "permissions":
   [
       "contextMenus",
