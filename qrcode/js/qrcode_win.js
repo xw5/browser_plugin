@@ -52,9 +52,12 @@ window.onload = function () {
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
   console.log(request);
-  // if(request.cmd === "qrcode") {
-  //   createQrcode (request.value);
-  // }
-  // sendResponse (request.value);
-  sendResponse (request);
+  if (request.cmd === "qrcode") {
+    if (request.value) {
+      createQrcode (request.value);
+      sendResponse (request.value);
+    } else {
+      alert('请选择你想要生成二维码的文本！');
+    }
+  }
 });

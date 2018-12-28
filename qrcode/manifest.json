@@ -22,7 +22,7 @@
   },
   "content_scripts": [
     {
-      "matches":["http://*/*","https://*/*"],
+      "matches": ["<all_urls>"],
       "css": ["css/qrcode_win.css"],
       "js": ["js/qrcode.min.js","js/qrcode_win.js"]
     }
@@ -38,6 +38,6 @@
       "http://*/*",
       "https://*/*"
   ],
-  "homepage_url": "https://www.baidu.com",
+  "homepage_url": "https://github.com/xw5/browser_plugin",
   "omnibox": { "keyword" : "qrcode" }
 }
